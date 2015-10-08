@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="bookApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Book Besties</title>
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href="../css/styles.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	</head>
+	<body ng-controller="bookController">
+		<h1>Book Besties</h1>
+		<h2>{{greeting}}</h2>
+		<script src="../js/main.js"></script>
+		<div class="border">
+			<h3>Register and start reading!</h3>
+			<form ng-submit="submitUser()">
+				<p>What is your name?</p>
+				<input placeholder="name..." ng-model="newUser.name" type="text">
+				<p>What is your favorite genre?</p>
+				<input placeholder="genre..." ng-model="newUser.genre" type="text">
+				<p><input type="submit" value="Start Reading!"></p>
+			</form>
+		</div>
+	</body>
+</html>
