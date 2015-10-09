@@ -9,9 +9,16 @@ bookApp.controller("bookController",["$scope","$http",function($scope,$http){
 	})
 
 	$scope.submitUser = function(){
-		$http.post('/submituser',$scope.newUser).then(function(returnData){
+		$http.post('/submituser',angular.copy($scope.newUser)).then(function(returnData){
 			$scope.users = returnData.data
+			console.log($scope.users)
 		})
+		$scope.newUser.name = ""
+		$scope.newUser.genre = ""
+	}
+
+	$scope.upvoteUser = function ($index){
+		
 	}
 
 }])
