@@ -23,7 +23,7 @@ app.get('/getusers', userController.getUsers)
 
 // SET UP SERVER AND LISTEN
 
-var port = 2412;
+var port = 80;
 
 app.listen(port, function(){
 	console.log("The server is running on port " + port)
